@@ -9,7 +9,7 @@ app.set('view engine', '.hbs');
 app.use(express.static(path.join(__dirname, '/public')));
 
 app.get('/', (req, res) => {
-  res.render('index.hbs', { layout: false });
+  res.render('index.hbs');
 });
 
 app.get('/hello/:name', (req, res) => {
@@ -17,19 +17,19 @@ app.get('/hello/:name', (req, res) => {
 });
 
 app.get('/about', (req, res) => {
-  res.render('about.hbs', { layout: false });
+  res.render('about.hbs');
 });
 
 app.get('/contact', (req, res) => {
-  res.render('contact.hbs', { layout: false });
+  res.render('contact.hbs');
 });
 
 app.get('/info', (req, res) => {
-  res.render('info.hbs', { layout: false });
+  res.render('info.hbs');
 });
 
 app.get('/history', (req, res, next) => {
-  res.render('history.hbs', { layout: false });
+  res.render('history.hbs');
 });
 
 app.use((req, res) => {

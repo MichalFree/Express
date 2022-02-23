@@ -57,7 +57,7 @@ app.post('/contact/send-message', upload.single('file'), (req, res) => {
   else {
     res.render('contact', { isError: true });
   }
-
+  console.log('Contact send message');
 });
 
 app.use((req, res) => {
